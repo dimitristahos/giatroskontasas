@@ -28,8 +28,10 @@
   });
 
   const token = ref();
+  const loading = ref(false);
 
   const submit = async (event: FormSubmitEvent<Schema>) => {
+    loading.value = true;
     try {
       const response = await axios.post(
         env.onlineFormUrl,
@@ -44,6 +46,8 @@
       console.log(response);
     } catch (err) {
       console.error(err);
+    } finally {
+      loading.value = false;
     }
   };
 
@@ -89,7 +93,14 @@
     </div>
 
     <div class="mt-6 flex justify-end">
-      <UButton type="submit" :ui="{ rounded: 'rounded-full' }" size="lg" label="Ενδιαφέρομαι" color="black" />
+      <UButton
+        :loading="loading"
+        type="submit"
+        :ui="{ rounded: 'rounded-full' }"
+        size="lg"
+        label="Ενδιαφέρομαι"
+        color="black"
+      />
     </div>
   </UForm>
 </template>
