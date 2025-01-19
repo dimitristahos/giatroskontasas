@@ -1,16 +1,19 @@
 <script setup lang="ts">
-const { data: home } = await useAsyncData(() => queryCollection("content").path("/").first());
+  const { data: home } = await useAsyncData(() => queryCollection("content").path("/").first());
 
-useSeoMeta({
-  title: home.value?.title,
-  description: home.value?.description,
-});
+  useSeoMeta({
+    title: home.value?.title,
+    description: home.value?.description,
+  });
 </script>
 
 <template>
-  <IndexHero />
-  <IndexHeroCards />
-  <IndexWhy />
-  <IndexWhyCards />
-  <IndexGranny />
+  <div id="home">
+    <IndexHero />
+    <IndexHeroCards />
+    <IndexWhy />
+    <IndexWhyCards />
+    <IndexGranny class="mb-[6rem]" />
+    <IndexContact />
+  </div>
 </template>

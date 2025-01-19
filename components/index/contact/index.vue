@@ -1,0 +1,54 @@
+<script setup lang="ts">
+  import DoctorForm from "./DoctorForm.vue";
+  import CitizenForm from "./CitizenForm.vue";
+
+  const components = {
+    DoctorForm,
+    CitizenForm,
+  };
+
+  const items = [
+    {
+      key: "DoctorForm",
+      label: "Γιατροί",
+    },
+    {
+      key: "CitizenForm",
+      label: "Πολίτες",
+    },
+  ];
+</script>
+
+<template>
+  <div>
+    <!-- Contact Us -->
+
+    <div class="relative bg-[url('/public/images/granny.png')] bg-cover bg-center bg-black/50 bg-blend-multiply">
+      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
+          <div>
+            <div class="mt-4 md:mb-12 max-w-2xl">
+              <h1 class="mb-4 font-semibold text-neutral-100 text-4xl lg:text-5xl">Είμαστε εδώ για να σας βοηθήσουμε</h1>
+              <p class="text-neutral-200">
+                Ενδιαφέρεστε για να συμμετέχετε στην ομάδα μας ή να εξυπηρετηθείτε; Συμπληρώστε τα στοιχεία σας και βοηθήστε
+                μας να προσαρμοσίμουμε τις υπηρεσίες μας στις ανάγκες σας.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="lg:max-w-lg lg:mx-auto lg:me-0 ms-auto min-h-[580px]">
+              <div class="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
+                <UTabs :items="items" class="w-full">
+                  <template #item="{ item }">
+                    <component :is="components[item.key]" />
+                  </template>
+                </UTabs>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
