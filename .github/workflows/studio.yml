@@ -62,7 +62,9 @@ jobs:
         run: npx nuxi build --preset github_pages
         env:
           NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
-          
+          NUXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NUXT_PUBLIC_TURNSTILE_SITE_KEY }}
+NUXT_TURNSTILE_SECRET_KEY: ${{ secrets.NUXT_TURNSTILE_SECRET_KEY }}
+ONLINE_FORM_URL: ${{ secrets.ONLINE_FORM_URL }}
 
       # Deployment job
       - name: Deploy 🚀
