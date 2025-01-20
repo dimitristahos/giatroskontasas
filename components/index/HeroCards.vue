@@ -1,7 +1,7 @@
 <template>
     <section class="px-4 lg:px-52 mb-5">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 border-b border-neutral-900 pb-8">
-            <div class="rounded-xl bg-white mt-[-60px] lg:mt-[-120px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+            <div class="rounded-xl bg-white mt-[-60px] lg:mt-[-120px] z-20 border border-black/10">
                 <div class="p-5">
                     <h2 class="text-xl font-semibold mb-3">
                         Βασικό Πακέτο Φροντίδας
@@ -14,7 +14,7 @@
                 <img src="/public/images/card-1.png" alt="" class="w-full rounded-b-xl mt-6">
             </div>
             <!-- CARD 2 -->
-            <div class="rounded-xl bg-white mt-5 lg:mt-[-120px]">
+            <div class="rounded-xl bg-white mt-2 lg:mt-[-120px] z-20 border border-black/10">
                 <div class="p-5">
                     <h2 class="text-xl font-semibold mb-3">
                         Ολοκληρωμένη Υγειονομική Υποστήριξη
@@ -27,15 +27,16 @@
                 <img src="/public/images/card-2.png" alt="" class="w-full rounded-b-xl mt-6">
             </div>
         </div>
+        <div class="border border-black/10 mt-5 mb-8"></div>
     </section>
 
     <section class="px-4 lg:px-52 py-10 mb-8">
         <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between">
             <!-- Left Column -->
             <div class="lg:w-1/3 mb-6 lg:mb-0">
-                <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                     Φροντίδα και υγεία, με άνεση στο σπίτι σας.
-                </h1>
+                </h2>
             </div>
 
             <!-- Right Column -->
