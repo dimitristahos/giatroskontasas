@@ -1,75 +1,17 @@
-# Nuxt Minimal Starter
+# Γιατρός Κοντά Σας - Project
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a project designed to provide an online platform for booking home medical services. The website offers an intuitive and user-friendly experience for patients seeking medical consultations at home.
 
-## Setup
+## 🚀 Features
 
-Make sure to install dependencies:
+- **Forms** – Fill out the form as Doctor or Patient.
+- **Responsive Design** – Fully optimized for desktop and mobile.
+- **SEO Optimized** – Built-in SEO enhancements for better visibility.
+- **TailwindCSS Integration** – Modern and clean UI design.
+- **Nuxt Content** – Manage dynamic pages easily.
 
-```bash
-# npm
-npm install
+## 🛠️ Tech Stack
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- **Nuxt 3** – Vue.js framework for server-side rendering and static site generation.
+- **TailwindCSS** – Utility-first CSS framework for styling.
+- **Nuxt Content** – Headless CMS for managing text content.
