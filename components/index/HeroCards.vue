@@ -1,7 +1,7 @@
 <template>
     <section class="px-4 lg:px-52 mb-5">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
-            <div class="rounded-xl bg-white mt-[-60px] lg:mt-[-120px] z-20 border border-black/10">
+            <div class="rounded-xl bg-white mt-[-50px] lg:mt-[-120px] z-20 border border-black/10">
                 <div class="p-5">
                     <h2 class="text-xl font-semibold mb-3">
                         Βασικό Πακέτο Φροντίδας

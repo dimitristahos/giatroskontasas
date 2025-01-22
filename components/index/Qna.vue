@@ -19,17 +19,16 @@ const items = [{
 </script>
 
 <template>
-    <section class="px-4 lg:px-52 mb-3 py-16 border-b border-neutral-300">
-        <div class="max-w-4xl">
-            <h2 class="text-4xl font-bold mb-8">Συχνές ερωτήσεις</h2>
-            <UAccordion
-                :items="items"
-                :ui="{
-                    header: {
-                        base: 'text-xl font-semibold text-neutral-950',
-                    }
-                }"
-             />
-        </div>
+    <section class="px-4 lg:px-52 mb-3 py-16 mx-auto text-center max-w-6xl">
+      <h2 class="text-4xl font-bold mb-8">Συχνές ερωτήσεις</h2>
+      <UAccordion
+          :items="items"
+          :ui="{
+              header: {
+                  base: 'text-xl font-semibold text-neutral-950',
+              }
+          }"
+        />
     </section>
+    <div class="border-b border-neutral-300"></div>
 </template>
