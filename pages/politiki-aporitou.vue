@@ -11,14 +11,14 @@
         </p>
 
         <h2 class="text-2xl font-semibold text-gray-800 mb-4">2. Χρήση Δεδομένων</h2>
-        <p class="mb-4">
+        <div class="mb-4">
             Τα δεδομένα σας χρησιμοποιούνται για:  
             <ul class="list-disc pl-5 mb-5">
                 <li>Παροχή ιατρικών υπηρεσιών κατ’ οίκον</li>
                 <li>Επικοινωνία μαζί σας σχετικά με ραντεβού και ενημερώσεις</li>
                 <li>Ανάλυση και βελτίωση των υπηρεσιών μας</li>
             </ul>
-        </p>
+        </div>
 
         <h2 class="text-2xl font-semibold text-gray-800 mb-4">3. Ασφάλεια Δεδομένων</h2>
         <p class="mb-4">

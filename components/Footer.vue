@@ -2,8 +2,15 @@
     <footer class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 text-xl">
-        Γιατρός κοντά σας
+      <a class="flex title-font font-medium items-center md:justify-start justify-center gap-3 text-gray-900 text-xl">
+        <img
+          src="/images/logo.svg"
+          alt="Γιατρός Κοντά σας Logo"
+          class="h-12 w-auto max-w-full object-contain"
+        />
+        <span>
+          Γιατρός κοντά σας
+        </span>
       </a>
       <p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, cumque.</p>
     </div>

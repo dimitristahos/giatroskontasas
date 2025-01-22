@@ -15,5 +15,6 @@
     <IndexWhyCards />
     <IndexGranny class="mb-[6rem]" />
     <IndexContact />
+    <IndexQna />
   </div>
 </template>
