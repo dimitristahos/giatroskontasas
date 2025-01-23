@@ -16,11 +16,9 @@
 </script>
 
 <template>
-  <div class="min-h-screen">
-    <Navbar />
+  <div class="min-h-screen bg-orange-300">
     <main>
       <slot />
-      <Footer />
     </main>
   </div>
 </template>
