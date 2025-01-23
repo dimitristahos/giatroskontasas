@@ -10,7 +10,7 @@
                         Η υγεία σας είναι προτεραιότητά μας. Βρείτε Γιατρούς που νοιάζονται, κλείστε ραντεβού εύκολα και
                         λάβετε τη φροντίδα που αξίζετε.
                 </p>
-                <div class="flex gap-4">
+                <div class="flex gap-4 mb-12 lg:mb-0">
                     <a class="cursor-pointer group relative inline-flex h-10 px-5 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-white font-medium"><div class="inline-flex h-12 translate-y-0 items-center justify-center px-6 text-neutral-950 transition duration-500 group-hover:-translate-y-[150%]">Ενδιαφέρομαι</div><div class="absolute inline-flex h-12 w-full translate-y-[100%] items-center justify-center text-neutral-950 transition duration-500 group-hover:translate-y-0"><span class="text-neutral-950 absolute h-full w-full translate-y-full skew-y-12 scale-y-0 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span><span class="z-10">Ενδιαφέρομαι</span></div></a>
                 </div>
             </div>
