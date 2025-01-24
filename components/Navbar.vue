@@ -38,25 +38,10 @@ onUnmounted(() => {
           class="h-12 w-auto max-w-full object-contain"
         />
       </NuxtLink>
-      <div class="flex space-x-5">
-        <NuxtLink
-          to="/"
-          class="cursor-pointer group relative inline-flex h-10 px-5 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-white font-medium"
-        >
-          <div
-            class="inline-flex h-12 translate-y-0 items-center justify-center px-6 text-neutral-950 transition duration-500 group-hover:-translate-y-[150%]"
-          >
-            Ενδιαφέρομαι
-          </div>
-          <div
-            class="absolute inline-flex h-12 w-full translate-y-[100%] items-center justify-center text-neutral-950 transition duration-500 group-hover:translate-y-0"
-          >
-            <span
-              class="text-neutral-950 absolute h-full w-full translate-y-full skew-y-12 scale-y-0 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"
-            ></span>
-            <span class="z-10">Ενδιαφέρομαι</span>
-          </div>
-        </NuxtLink>
+      <div class="flex space-x-5 items-center">
+        <NuxtLink to="/giatros" class="font-semibold cursor-pointer opacity-80 hover:opacity-100">Γιατροί</NuxtLink>
+        <NuxtLink to="/polites" class="font-semibold cursor-pointer opacity-80 hover:opacity-100">Πολίτες</NuxtLink>
+        <NuxtLink to="/" class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-600">Ενδιαφέρομαι</NuxtLink>
       </div>
     </nav>
   </header>
