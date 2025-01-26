@@ -1,11 +1,22 @@
 <script setup lang="ts">
+  const $route = useRoute();
+
   const isOpen = ref<boolean>(false);
   const submitSuccess = ref<boolean>(false);
+
+  const open = () => {
+    if ($route.name === "index") {
+      window.location.href = "/#interest-form";
+      return;
+    }
+
+    isOpen.value = true;
+  };
 </script>
 
 <template>
   <div>
-    <UButton class="px-4" label="Ενδιαφέρομαι" color="blue" @click="isOpen = true" />
+    <UButton class="px-4" label="Ενδιαφέρομαι" color="blue" @click="open" />
 
     <UModal v-model="isOpen" prevent-close>
       <UCard :ui="{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
