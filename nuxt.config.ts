@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile"],
+  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile", "@nuxt/icon"],
   runtimeConfig: {
     public: {
       baseUrl: process.env.BASE_URL || "http://localhost:3000",
@@ -9,6 +9,11 @@ export default defineNuxtConfig({
   },
   colorMode: {
     preference: "light",
+  },
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
   },
   content: {},
   compatibilityDate: "2024-11-01",
