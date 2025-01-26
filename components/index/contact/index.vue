@@ -2,6 +2,8 @@
   import DoctorForm from "./DoctorForm.vue";
   import CitizenForm from "./CitizenForm.vue";
 
+  const submitSuccess = ref<boolean>(false);
+
   const components = {
     DoctorForm,
     CitizenForm,
@@ -36,14 +38,20 @@
             </div>
           </div>
 
-          <div>
-            <div class="lg:max-w-lg lg:mx-auto lg:me-0 ms-auto min-h-[580px]">
-              <div class="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
-                <UTabs :items="items" class="w-full">
-                  <template #item="{ item }">
-                    <component :is="components[item.key]" />
-                  </template>
-                </UTabs>
+          <div class="lg:max-w-lg lg:mx-auto lg:me-0 ms-auto min-h-[580px]">
+            <div class="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
+              <UTabs v-if="!submitSuccess" :items="items" class="w-full">
+                <template #item="{ item }">
+                  <component v-model="submitSuccess" :is="components[item.key]" />
+                </template>
+              </UTabs>
+
+              <div v-else class="inset-0 z-50 flex items-center justify-center">
+                <div class="p-8 text-center max-w-md w-full">
+                  <UIcon name="i-heroicons-check-circle" class="mx-auto text-green-500 mb-4" size="64" />
+                  <h2 class="text-2xl font-bold text-gray-800 mb-4">Ευχαριστούμε!</h2>
+                  <p class="text-gray-600 mb-6">Λάβαμε την μυνημά σας. Θα επιστρέψουμε σύντομα.</p>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { defineModel } from "vue";
   import type { FormSubmitEvent } from "#ui/types";
   import { z } from "zod";
   import axios from "axios";
@@ -10,13 +11,22 @@
   const env = runtimeConfig.public;
 
   const schema = z.object({
-    firstName: z.string().min(3, "Must be at least 3 characters"),
-    lastName: z.string().min(3, "Must be at least 3 characters"),
-    email: z.string().email("Invalid email address"),
-    phone: z.string().min(10, "Must be at least 10 characters"),
-    specialty: z.string().min(2, "Must be at least 2 characters"),
+    firstName: z.string().min(3, "Πρέπει να έχει τουλάχιστον 3 χαρακτήρες"),
+    lastName: z.string().min(3, "Πρέπει να έχει τουλάχιστον 3 χαρακτήρες"),
+    email: z.string().email("Μη έγκυρη διεύθυνση email"),
+    phone: z.string().min(10, "Πρέπει να έχει τουλάχιστον 10 χαρακτήρες"),
+    specialty: z.string().min(2, "Πρέπει να έχει τουλάχιστον 2 χαρακτήρες"),
     message: z.string().optional(),
   });
+
+  z.setErrorMap((issue: z.ZodIssueOptionalMessage, ctx: z.ErrorMapCtx) => {
+    if (issue.code === "invalid_type" && issue.received === "undefined") {
+      return { message: "Το πεδίο είναι υποχρεωτικό" };
+    }
+    return { message: ctx.defaultError };
+  });
+
+  const submitSuccess = defineModel<boolean>();
 
   const state = reactive({
     firstName: undefined,
@@ -33,7 +43,7 @@
   const submit = async (event: FormSubmitEvent<Schema>) => {
     loading.value = true;
     try {
-      const response = await axios.post(
+      await axios.post(
         env.onlineFormUrl,
         qs.stringify({
           action: "insert_online_form",
@@ -43,7 +53,7 @@
         })
       );
 
-      console.log(response);
+      submitSuccess.value = true;
     } catch (err) {
       console.error(err);
     } finally {
