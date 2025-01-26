@@ -15,6 +15,7 @@
     lastName: z.string().min(3, "Πρέπει να έχει τουλάχιστον 3 χαρακτήρες"),
     email: z.string().email("Μη έγκυρη διεύθυνση email"),
     phone: z.string().min(10, "Πρέπει να έχει τουλάχιστον 10 χαρακτήρες"),
+    specialty: z.string().min(2, "Πρέπει να έχει τουλάχιστον 2 χαρακτήρες"),
     message: z.string().optional(),
   });
 
@@ -32,6 +33,7 @@
     lastName: undefined,
     email: undefined,
     phone: undefined,
+    specialty: undefined,
     message: undefined,
   });
 
@@ -45,7 +47,7 @@
         env.onlineFormUrl,
         qs.stringify({
           action: "insert_online_form",
-          type: "politis",
+          type: "giatros",
           ...event.data,
           cf_turnstile_response: token.value,
         })
@@ -88,6 +90,9 @@
           <UInput v-model="state.phone" />
         </UFormGroup>
       </div>
+      <UFormGroup label="Ειδικότητα*" name="specialty" eager-validation>
+        <UInput v-model="state.specialty" />
+      </UFormGroup>
       <UFormGroup label="Μήνυμα" name="message" eager-validation>
         <UTextarea v-model="state.message" />
       </UFormGroup>
@@ -98,14 +103,7 @@
     </div>
 
     <div class="mt-6 flex justify-end">
-      <UButton
-        :loading="loading"
-        type="submit"
-        :ui="{ rounded: 'rounded-full' }"
-        size="lg"
-        label="Ενδιαφέρομαι"
-        color="black"
-      />
+      <UButton :loading="loading" type="submit" size="lg" label="Ενδιαφέρομαι" color="blue" class="px-4" />
     </div>
   </UForm>
 </template>

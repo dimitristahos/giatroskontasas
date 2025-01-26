@@ -1,24 +1,24 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+  import { ref, onMounted, onUnmounted } from "vue";
 
-const isScrolled = ref(false);
+  const isScrolled = ref(false);
 
-const handleScroll = () => {
-  if (window.scrollY > 0 && !isScrolled.value) {
-    isScrolled.value = true;
-  } else if (window.scrollY === 0 && isScrolled.value) {
-    isScrolled.value = false;
-  }
-};
+  const handleScroll = () => {
+    if (window.scrollY > 0 && !isScrolled.value) {
+      isScrolled.value = true;
+    } else if (window.scrollY === 0 && isScrolled.value) {
+      isScrolled.value = false;
+    }
+  };
 
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
-  handleScroll();
-});
+  onMounted(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+  });
 
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
-});
+  onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+  });
 </script>
 
 <template>
@@ -32,16 +32,12 @@ onUnmounted(() => {
   >
     <nav class="flex items-center justify-between py-3">
       <NuxtLink to="/" class="fw-bold flex items-center">
-        <img
-          src="/images/logo.svg"
-          alt="Γιατρός Κοντά σας Logo"
-          class="h-12 w-auto max-w-full object-contain"
-        />
+        <img src="/images/logo.svg" alt="Γιατρός Κοντά σας Logo" class="h-12 w-auto max-w-full object-contain" />
       </NuxtLink>
       <div class="flex space-x-5 items-center">
         <NuxtLink to="/giatros" class="font-semibold cursor-pointer opacity-80 hover:opacity-100">Γιατροί</NuxtLink>
         <NuxtLink to="/polites" class="font-semibold cursor-pointer opacity-80 hover:opacity-100">Πολίτες</NuxtLink>
-        <NuxtLink to="/" class="bg-blue-800 text-white px-4 py-1 rounded-lg hover:bg-blue-600">Ενδιαφέρομαι</NuxtLink>
+        <InterestDialog />
       </div>
     </nav>
   </header>

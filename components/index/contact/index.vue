@@ -1,24 +1,5 @@
 <script setup lang="ts">
-  import DoctorForm from "./DoctorForm.vue";
-  import CitizenForm from "./CitizenForm.vue";
-
   const submitSuccess = ref<boolean>(false);
-
-  const components = {
-    DoctorForm,
-    CitizenForm,
-  };
-
-  const items = [
-    {
-      key: "DoctorForm",
-      label: "Γιατροί",
-    },
-    {
-      key: "CitizenForm",
-      label: "Πολίτες",
-    },
-  ];
 </script>
 
 <template>
@@ -40,11 +21,7 @@
 
           <div class="lg:max-w-lg lg:mx-auto lg:me-0 ms-auto min-h-[580px]">
             <div class="p-4 sm:p-7 flex flex-col bg-white rounded-2xl shadow-lg">
-              <UTabs v-if="!submitSuccess" :items="items" class="w-full">
-                <template #item="{ item }">
-                  <component v-model="submitSuccess" :is="components[item.key]" />
-                </template>
-              </UTabs>
+              <IndexContactForm v-if="!submitSuccess" v-model="submitSuccess" />
 
               <div v-else class="inset-0 z-50 flex items-center justify-center">
                 <div class="p-8 text-center max-w-md w-full">
