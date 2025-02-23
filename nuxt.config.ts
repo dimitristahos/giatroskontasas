@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile", "@nuxt/icon"],
+  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile", "@nuxt/icon", "@nuxt/eslint"],
+
   ssr: false,
   runtimeConfig: {
     public: {
@@ -17,6 +18,9 @@ export default defineNuxtConfig({
     },
   },
   content: {},
+  eslint: {
+    checker: true,
+  },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 });
