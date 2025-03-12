@@ -19,7 +19,7 @@
     loading.value = true;
     try {
       const slidesObject = props.slides.reduce((acc, slide) => {
-        acc[slide.name] = slide.answer;
+        acc[slide.name] = Array.isArray(slide.answer) ? slide.answer.join(", ") : slide.answer;
         return acc;
       }, {});
 
