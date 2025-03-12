@@ -22,42 +22,49 @@
   const slides = ref([
     {
       title: "Ονοματεπώνυμο",
+      name: "fullname",
       type: "text",
       required: true,
       answer: "",
     },
     {
       title: "Email",
+      name: "email",
       type: "text",
       required: true,
       answer: "",
     },
     {
       title: "Τηλέφωνο",
+      name: "phone",
       type: "text",
       required: true,
       answer: "",
     },
     {
       title: "Ειδικότητα",
+      name: "speciality",
       type: "text",
       required: true,
       answer: "",
     },
     {
       title: "Έτος ειδικότητας",
+      name: "year_of_specialty",
       type: "text",
       required: true,
       answer: null,
     },
     {
       title: "Νοσοκομείο/Κέντρο Υγείας όπου εργάζομαι",
+      name: "clinic",
       type: "text",
       required: true,
       answer: "",
     },
     {
       title: "Επιθυμητό καθαρό κέρδος ανά επίσκεψη",
+      name: "price",
       type: "slider",
       min: 20,
       max: 80,
@@ -66,6 +73,7 @@
     },
     {
       title: "Ποιες ημέρες είστε διαθέσιμος/η για επισκέψεις;",
+      name: "available_days",
       type: "multipleChoice",
       options: ["Καθημερινές", "Σαββατοκύριακα"],
       required: true,
@@ -73,6 +81,7 @@
     },
     {
       title: "Μέσο Μετακίνησης",
+      name: "transport",
       type: "multipleChoice",
       options: ["Αυτοκίνητο", "Μηχανάκι", "Δεν διαθέτω μέσο μετακίνησης"],
       required: true,
@@ -80,6 +89,7 @@
     },
     {
       title: "Είστε διαθέσιμος/η για έκτακτα περιστατικά εκτός προγραμματισμένων ραντεβού;",
+      name: "available_outside",
       type: "rating",
       options: ["Ναι", "Όχι"],
       required: true,
@@ -87,6 +97,7 @@
     },
     {
       title: "Πώς προτιμάτε να επικοινωνείτε με ασθενείς;",
+      name: "communication",
       type: "multipleChoice",
       options: ["Τηλεφωνικά", "Μέσω email", "Μέσω μηνυμάτων"],
       required: true,
@@ -94,6 +105,7 @@
     },
     {
       title: "Ποιες υπηρεσίες προτιμάτε να παρέχετε;",
+      name: "services_to_offer",
       type: "multipleChoice",
       options: ["Κατ’ οίκον επισκέψεις", "Τηλεϊατρική (online ραντεβού)"],
       required: true,
@@ -101,6 +113,7 @@
     },
     {
       title: "Σε πόσο χρόνο μπορείτε να αναλάβετε ένα νέο περιστατικό;",
+      name: "available_for_new_patient",
       type: "rating",
       options: ["Άμεσα (μέσα σε 1 ώρα)", "Σε λίγες ώρες", "Εντός της ημέρας", "Εντός 2-3 ημερών"],
       required: true,
@@ -108,6 +121,7 @@
     },
     {
       title: "Μπορείτε να παρέχετε ηλεκτρονική συνταγογράφηση;",
+      name: "electronic_perscription",
       type: "rating",
       options: ["Ναι", "Όχι"],
       required: true,
@@ -140,7 +154,7 @@
       </div>
     </div>
 
-    <QuestionaireThankYou v-else />
+    <QuestionaireThankYou v-else :slides="slides" :is-submitted="isSubmitted" />
 
     <QuestionaireNavigation
       ref="navigationRef"

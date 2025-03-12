@@ -25,7 +25,7 @@
 <template>
   <UTabs :items="items" class="w-full">
     <template #item="{ item }">
-      <component v-model="submitSuccess" :is="components[item.key]" />
+      <component :is="components[item.key]" v-model="submitSuccess" />
     </template>
   </UTabs>
 </template>
