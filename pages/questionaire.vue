@@ -8,6 +8,8 @@
     layout: "questionaire",
   });
 
+  const $route = useRoute();
+
   const currentSlide = ref<number>(0);
   const isSubmitted = ref(false);
   const navigationRef = ref();
@@ -128,6 +130,12 @@
       answer: "",
     },
   ]);
+
+  onMounted(() => {
+    if (!$route.query.id) {
+      window.location.href = "/";
+    }
+  });
 </script>
 
 <template>
