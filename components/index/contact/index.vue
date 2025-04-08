@@ -6,7 +6,7 @@
   <div id="interest-form">
     <!-- Contact Us -->
     <div class="relative bg-[url('/public/images/dr-form-bg.jpg')] bg-cover bg-center bg-black/50 bg-blend-multiply">
-      <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div class="py-10 container">
         <div class="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
           <div>
             <div class="mt-4 md:mb-12 max-w-2xl">

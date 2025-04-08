@@ -33,4 +33,8 @@
   body {
     @apply bg-white text-neutral-900;
   }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-2xl;
+  }
 </style>

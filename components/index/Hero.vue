@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-[60vh] lg:min-h-[80vh] flex items-center px-4 lg:px-52 overflow-hidden">
+  <div class="relative min-h-[60vh] lg:min-h-[80vh] flex items-center overflow-hidden">
     <!-- Video Background -->
     <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
       <source
@@ -13,7 +13,7 @@
     <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
 
     <!-- Content -->
-    <div class="relative z-20 flex flex-col lg:flex-row justify-between lg:items-center w-full">
+    <div class="relative z-20 flex flex-col lg:flex-row justify-between lg:items-center container">
       <!-- Left Section -->
       <div class="lg:w-1/2 lg:text-left">
         <h1 class="text-3xl lg:text-6xl font-semibold text-white !leading-tight mb-5 lg:mb-0">

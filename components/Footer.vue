@@ -1,63 +1,82 @@
 <template>
-    <footer class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center gap-3 text-gray-900 text-xl">
-        <img
-          src="/images/logo.svg"
-          alt="Γιατρός Κοντά σας Logo"
-          class="h-12 w-auto max-w-full object-contain"
-        />
-        <span>
-          Γιατρός κοντά σας
-        </span>
-      </a>
-      <p class="mt-2 text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, cumque.</p>
-    </div>
-    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-lg mb-3">Επικοινωνία</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">email</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Τηλέφωνο</a>
-          </li>
-        </nav>
+  <div class="p-6">
+    <footer class="bg-blue-300 text-black rounded-lg">
+      <div class="container mx-auto px-5 py-16 flex flex-wrap">
+        <div class="w-full md:w-1/4 flex flex-col items-start">
+          <img
+            src="/images/logo.svg"
+            alt="Γιατρός Κοντά σας Logo"
+            class="h-40 w-auto max-w-full object-contain brightness-[0] grayscale"
+          />
+        </div>
+
+        <div class="w-full md:w-1/4 mt-8 md:mt-0">
+          <h2 class="text-3xl font-medium mb-6">Giatroskontasas.gr</h2>
+        </div>
+
+        <div class="w-full md:w-1/2 flex flex-wrap justify-between">
+          <div class="w-full md:w-1/6 mt-8 md:mt-0">
+            <h3 class="font-medium text-lg mb-4">Σχετικά</h3>
+            <ul class="space-y-2">
+              <li><NuxtLink to="/mission" class="hover:underline">Mission</NuxtLink></li>
+              <li><NuxtLink to="/team" class="hover:underline">Team</NuxtLink></li>
+              <li><NuxtLink to="/newsletter" class="hover:underline">Newsletter</NuxtLink></li>
+            </ul>
+          </div>
+
+          <div class="w-full md:w-1/6 mt-8 md:mt-0">
+            <h3 class="font-medium text-lg mb-4">Επικοινωνία</h3>
+            <ul class="space-y-2">
+              <li><NuxtLink to="/" class="hover:underline">Email</NuxtLink></li>
+              <li><NuxtLink to="/" class="hover:underline">Τηλέφωνο</NuxtLink></li>
+            </ul>
+          </div>
+
+          <div class="w-full md:w-1/6 mt-8 md:mt-0">
+            <h3 class="font-medium text-lg mb-4">Social</h3>
+            <ul class="space-y-2">
+              <li><a href="#" target="_blank" class="hover:underline">Facebook</a></li>
+              <li><a href="#" target="_blank" class="hover:underline">Instagram</a></li>
+              <li><a href="#" target="_blank" class="hover:underline">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <!-- Bottom Bar -->
+      <div class="container">
+        <div class="border-b border-black"></div>
+
+        <div class="mx-auto py-4 flex flex-wrap justify-between items-center">
+          <p class="text-sm">Copyright © giatroskontasas</p>
+          <NuxtLink to="/politiki-aporitou" class="text-sm hover:underline">Πολιτική Απορρήτου</NuxtLink>
+          <a href="#" @click.prevent="scrollToTop" class="flex items-center text-sm hover:underline">
+            Πίσω στην κορυφή
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ml-1 w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
-  <div class="bg-gray-100">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2025 Γιατρός κοντά σας —
-        <a href="#" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">emeis</a>
-      </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a class="text-gray-500 cursor-pointer">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500 cursor-pointer">
-          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500 cursor-pointer">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-        <a class="ml-3 text-gray-500 cursor-pointer">
-          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-          </svg>
-        </a>
-      </span>
-    </div>
-  </div>
-</footer>
 </template>
+
+<script>
+  export default {
+    methods: {
+      scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      },
+    },
+  };
+</script>

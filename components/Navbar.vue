@@ -27,14 +27,14 @@
   <header
     id="header"
     :class="{
-      'bg-white shadow-md': isScrolled,
+      'backdrop-blur-md bg-white/60 shadow-sm': isScrolled,
       'bg-transparent': !isScrolled,
       fixed: isHomePage,
       sticky: !isHomePage,
     }"
-    class="px-4 lg:px-52 top-0 left-0 right-0 z-50 transition-colors duration-300"
+    class="top-0 left-0 right-0 z-50 transition-all duration-300"
   >
-    <nav class="flex items-center justify-between py-3">
+    <nav class="flex items-center justify-between py-3 container">
       <NuxtLink to="/" class="fw-bold flex items-center">
         <img
           src="/images/logo.svg"
@@ -43,7 +43,7 @@
           :class="{
             'brightness-[9] grayscale': !isScrolled && isHomePage,
           }"
-        >
+        />
       </NuxtLink>
       <div class="flex space-x-5 items-center">
         <NuxtLink
