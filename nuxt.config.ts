@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile", "@nuxt/icon", "@nuxt/eslint"],
-
+  modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile", "@nuxt/icon", "@nuxt/eslint", "@nuxtjs/seo"],
+  seo: {
+    baseUrl: "https://giatroskontasas.gr",
+    siteName: "Γιατρός Κοντά σας",
+    description: "Βρείτε τον κατάλληλο επαγγελματία υγίας δίπλα σας",
+  },
   ssr: false,
   runtimeConfig: {
     public: {

@@ -62,6 +62,15 @@
           }"
           >Πολίτες</NuxtLink
         >
+
+        <NuxtLink
+          to="/blog"
+          class="font-semibold cursor-pointer opacity-80 hover:opacity-100"
+          :class="{
+            'text-white': !isScrolled && isHomePage,
+          }"
+          >Άρθρα</NuxtLink
+        >
         <InterestDialog />
       </div>
     </nav>
