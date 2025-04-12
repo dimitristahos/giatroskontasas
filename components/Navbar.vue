@@ -44,7 +44,13 @@
             'brightness-[9] grayscale': !isScrolled && isHomePage,
           }"
         />
-        giatroskontasas.gr
+        <div
+          :class="{
+            'text-white': !isScrolled && isHomePage,
+          }"
+        >
+          giatroskontasas.gr
+        </div>
       </NuxtLink>
       <div class="flex space-x-5 items-center">
         <NuxtLink
