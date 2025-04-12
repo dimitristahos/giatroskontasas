@@ -225,7 +225,7 @@
     map = L.map("map", {
       zoomControl: false, // hides zoom control
       attributionControl: false,
-    }).setView([40.6401, 22.9444], 12);
+    }).setView([40.6401, 22.9444], 13);
 
     L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
       attribution:
@@ -290,8 +290,10 @@
     </div>
 
     <!-- Map or Hero Image Section (Placeholder) -->
-    <div class="relative z-10 rounded-xl w-full h-[34rem] pointer-events-none overflow-hidden">
-      <div id="map" class="w-full h-[34rem] bg-gray-300 mb-16"></div>
+    <div
+      class="relative z-10 rounded-xl w-full h-[34rem] pointer-events-auto overflow-hidden after:absolute after:left-0 after:top-0 after:w-full after:h-full after:z-[999] after:content-[''] after:pointer-events-auto"
+    >
+      <div id="map" class="w-full h-[34rem] bg-gray-300 mb-16 pointer-events-none"></div>
     </div>
 
     <!-- Ιδέα και Στόχος Section -->
