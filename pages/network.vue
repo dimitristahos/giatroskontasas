@@ -261,7 +261,7 @@
 <template>
   <section class="py-16 container mx-auto px-4">
     <!-- Header Section -->
-    <div class="flex flex-wrap justify-between items-center mb-12">
+    <div class="flex flex-wrap justify-between mb-12">
       <h1 class="text-4xl lg:text-5xl font-semibold max-w-[650px] lg:leading-snug">Το Δίκτυο Γιατρών μας</h1>
       <div>
         <p class="mb-5 max-w-[620px] text-lg opacity-80">

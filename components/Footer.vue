@@ -19,7 +19,7 @@
             <h3 class="font-medium text-lg mb-4">Σχετικά</h3>
             <ul class="space-y-2">
               <li><NuxtLink to="/network" class="hover:underline">Το Δίκτυο Γιατρών μας</NuxtLink></li>
-              <li><NuxtLink to="/team" class="hover:underline">Team</NuxtLink></li>
+              <li><NuxtLink to="/blog" class="hover:underline">Άρθρα</NuxtLink></li>
               <li><NuxtLink to="/newsletter" class="hover:underline">Newsletter</NuxtLink></li>
             </ul>
           </div>
