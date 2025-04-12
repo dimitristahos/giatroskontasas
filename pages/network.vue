@@ -259,136 +259,221 @@
 </script>
 
 <template>
-  <section class="py-16 container mx-auto px-4">
-    <!-- Header Section -->
-    <div class="flex flex-wrap justify-between mb-12">
-      <h1 class="text-4xl lg:text-5xl font-semibold max-w-[650px] lg:leading-snug">Το Δίκτυο Γιατρών μας</h1>
-      <div>
-        <p class="mb-5 max-w-[620px] text-lg opacity-80">
-          Η πλατφόρμα μας βασίζεται σε ένα ευφυές δίκτυο γιατρών που βρίσκονται σε διάφορες περιοχές. Μέσω αυτού του δικτύου,
-          διασφαλίζουμε ότι ο πλησιέστερος και διαθέσιμος γιατρός θα ανταποκριθεί άμεσα στο αίτημά σας.
-        </p>
-        <a
-          class="cursor-pointer group relative inline-flex h-10 px-5 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-white font-medium"
-          href="#contact"
-        >
-          <div
-            class="inline-flex h-12 items-center justify-center px-6 text-neutral-950 transition duration-500 group-hover:-translate-y-[150%]"
+  <div>
+    <section class="py-16 container mx-auto px-4">
+      <!-- Header Section -->
+      <div class="flex flex-wrap justify-between mb-12">
+        <h1 class="text-4xl lg:text-5xl font-semibold max-w-[650px] lg:leading-snug">Το Δίκτυο Γιατρών μας</h1>
+        <div>
+          <p class="mb-5 max-w-[620px] text-lg opacity-80">
+            Η πλατφόρμα μας βασίζεται σε ένα ευφυές δίκτυο γιατρών που βρίσκονται σε διάφορες περιοχές. Μέσω αυτού του
+            δικτύου, διασφαλίζουμε ότι ο πλησιέστερος και διαθέσιμος γιατρός θα ανταποκριθεί άμεσα στο αίτημά σας.
+          </p>
+          <a
+            class="cursor-pointer group relative inline-flex h-10 px-5 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-white font-medium"
+            href="#contact"
           >
-            Ενδιαφέρομαι
-          </div>
-          <div
-            class="absolute inline-flex h-12 w-full items-center justify-center text-neutral-950 transition duration-500 group-hover:translate-y-0 translate-y-[100%]"
-          >
-            <span
-              class="absolute h-full w-full translate-y-full skew-y-12 scale-y-0 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"
-            ></span>
-            <span class="z-10">Ενδιαφέρομαι</span>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- Map or Hero Image Section (Placeholder) -->
-    <div
-      class="relative z-10 rounded-xl w-full h-[34rem] pointer-events-auto overflow-hidden after:absolute after:left-0 after:top-0 after:w-full after:h-full after:z-[999] after:content-[''] after:pointer-events-auto"
-    >
-      <div id="map" class="w-full h-[34rem] bg-gray-300 mb-16 pointer-events-none"></div>
-    </div>
-
-    <!-- Ιδέα και Στόχος Section -->
-    <div class="mt-16">
-      <h2 class="text-3xl font-semibold mb-5">Ιδέα και Στόχος</h2>
-      <p class="max-w-[820px] text-xl opacity-80 leading-relaxed">
-        Η βασική ιδέα είναι να δημιουργηθεί ένα διασυνδεδεμένο δίκτυο γιατρών που επιτρέπει στους χρήστες να κλείνουν
-        ραντεβού μέσω μιας ψηφιακής πλατφόρμας.
-        <br /><br />
-        <strong>Αυτόματη Ανίχνευση:</strong> Ο χρήστης όταν ζητά ραντεβού, εντοπίζει τον κοντινότερο γιατρό ή τον πλέον
-        κατάλληλο βάσει γεωγραφικών και δυναμικών δεδομένων (π.χ. διαθεσιμότητα, ειδικότητα). <br /><br />
-        <strong>Δυνατότητα Αλλαγής:</strong> Ο χρήστης μπορεί να αλλάξει τον γιατρό που θα τον εξυπηρετήσει (έως μία ώρα πριν
-        την άφιξή του στο σπίτι) σε περίπτωση αλλαγής στο πρόγραμμα ή ανάγκης. <br /><br />
-        <strong>Επαναπρογραμματισμός:</strong> Ο χρήστης έχει τη δυνατότητα να μεταφέρει το ραντεβού για άλλη ημέρα, εάν
-        παρουσιαστεί κάποιο πρόβλημα.
-      </p>
-    </div>
-
-    <!-- Τεχνική Εφαρμογή και Οφέλη Section -->
-    <div class="mt-16">
-      <h2 class="text-3xl font-semibold mb-5">Τεχνική Εφαρμογή και Οφέλη</h2>
-      <div class="space-y-8">
-        <!-- Τεχνολογική Υλοποίηση -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">Τεχνολογική Υλοποίηση</h3>
-          <ul class="list-disc list-inside text-lg opacity-80 leading-relaxed">
-            <li>
-              <strong>Δικτυακή Συνδεσιμότητα:</strong>
-              Ο αλγόριθμος συλλέγει δεδομένα (τοποθεσία, διαθεσιμότητα, εξειδίκευση) για να αντιστοιχίσει αυτόματα τον χρήστη
-              με τον καταλληλότερο γιατρό.
-            </li>
-            <li>
-              <strong>Ενημέρωση σε Πραγματικό Χρόνο:</strong>
-              Με τη χρήση GPS και cloud τεχνολογιών, το σύστημα ενημερώνεται συνεχώς ώστε ο γιατρός να είναι ενημερωμένος για
-              τις διαδρομές και διαθεσιμότητες.
-            </li>
-            <li>
-              <strong>Δυνατότητα Διόρθωσης:</strong>
-              Η πλατφόρμα επιτρέπει στον χρήστη να αλλάξει ή να επαναπρογραμματίσει το ραντεβού του ώστε να εξυπηρετείται
-              καλύτερα.
-            </li>
-          </ul>
-        </div>
-        <!-- Οφέλη για τους Χρήστες -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">Οφέλη για τους Χρήστες</h3>
-          <ul class="list-disc list-inside text-lg opacity-80 leading-relaxed">
-            <li>
-              <strong>Ταχύτερη Εξυπηρέτηση:</strong>
-              Η άμεση αντιστοίχιση μειώνει τον χρόνο αναμονής.
-            </li>
-            <li>
-              <strong>Ευελιξία στη Διαχείριση:</strong>
-              Ο χρήστης έχει τον πλήρη έλεγχο για αλλαγή ραντεβού ή γιατρού ανάλογα με τις μεταβαλλόμενες ανάγκες.
-            </li>
-            <li>
-              <strong>Βελτίωση της Ποιότητας Φροντίδας:</strong>
-              Ο συνδυασμός δεδομένων για την ειδικότητα και την εμπειρία του γιατρού βοηθά στο να παρασχεθεί η βέλτιστη
-              ιατρική φροντίδα.
-            </li>
-          </ul>
-        </div>
-        <!-- Οφέλη για τους Γιατρούς και τις Επιχειρήσεις -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">Οφέλη για τους Γιατρούς και τις Επιχειρήσεις</h3>
-          <ul class="list-disc list-inside text-lg opacity-80 leading-relaxed">
-            <li>
-              <strong>Καλύτερη Διαχείριση Χρόνου:</strong>
-              Οι γιατροί μπορούν να οργανώνουν τα ραντεβού τους πιο αποδοτικά, μειώνοντας τα κενά μεταξύ των επισκέψεων.
-            </li>
-            <li>
-              <strong>Ενίσχυση Συνεργασίας:</strong>
-              Το δίκτυο προωθεί την ανταλλαγή πληροφοριών και την άμεση επικοινωνία μεταξύ των γιατρών.
-            </li>
-            <li>
-              <strong>Αποτελεσματικότητα Λειτουργίας:</strong>
-              Η ψηφιοποίηση της διαχείρισης των ραντεβού επιτρέπει την καλύτερη καταγραφή δεδομένων, διενέργεια αναλύσεων και
-              μείωση διοικητικών εξόδων.
-            </li>
-          </ul>
+            <div
+              class="inline-flex h-12 items-center justify-center px-6 text-neutral-950 transition duration-500 group-hover:-translate-y-[150%]"
+            >
+              Ενδιαφέρομαι
+            </div>
+            <div
+              class="absolute inline-flex h-12 w-full items-center justify-center text-neutral-950 transition duration-500 group-hover:translate-y-0 translate-y-[100%]"
+            >
+              <span
+                class="absolute h-full w-full translate-y-full skew-y-12 scale-y-0 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"
+              ></span>
+              <span class="z-10">Ενδιαφέρομαι</span>
+            </div>
+          </a>
         </div>
       </div>
-    </div>
 
-    <!-- Συμπέρασμα Section -->
-    <div class="mt-16 mb-16">
-      <h2 class="text-3xl font-semibold mb-5">Συμπέρασμα</h2>
-      <p class="max-w-[820px] text-xl opacity-80 leading-relaxed">
-        Η ανάπτυξη ενός διασυνδεδεμένου δίκτυου γιατρών μέσω ψηφιακής πλατφόρμας προσφέρει μια καινοτόμο προσέγγιση στην
-        οικιακή περίθαλψη. Επιτρέπει στους ασθενείς να κλείνουν ραντεβού με τον κοντινότερο ή καταλληλότερο γιατρό, να
-        αλλάζουν ραντεβού ή γιατρό (μέχρι μία ώρα πριν) και να επαναπρογραμματίζουν εύκολα σύμφωνα με τις ανάγκες τους.
-        <br /><br />
-        Αυτό το μοντέλο μπορεί να μειώσει σημαντικά τον χρόνο αναμονής, να βελτιώσει την εμπειρία των ασθενών και να αυξήσει
-        την αποτελεσματικότητα του συστήματος υγείας.
-      </p>
-    </div>
-  </section>
+      <!-- Map or Hero Image Section (Placeholder) -->
+      <div
+        class="relative z-10 rounded-xl w-full h-[34rem] pointer-events-auto overflow-hidden after:absolute after:left-0 after:top-0 after:w-full after:h-full after:z-[999] after:content-[''] after:pointer-events-auto"
+      >
+        <div id="map" class="w-full h-[34rem] bg-gray-300 mb-16 pointer-events-none"></div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Κύρια Χαρακτηριστικά</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Η πλατφόρμα μας προσφέρει καινοτόμες λύσεις για την εύκολη εύρεση και διαχείριση ιατρικών ραντεβού.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <!-- Feature 1 -->
+          <div class="bg-blue-50 rounded-xl p-8 text-center transition duration-300">
+            <div class="inline-block p-1 bg-blue-100 rounded-full mb-6">
+              <img src="/public/images/gifs/face-scan.gif" alt="Technical implementation" class="rounded-full w-12 h-12" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Αυτόματη Ανίχνευση</h3>
+            <p class="text-gray-600">
+              Εντοπίζουμε τον κοντινότερο ή καταλληλότερο γιατρό βάσει γεωγραφικών και δυναμικών δεδομένων.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-indigo-50 rounded-xl p-8 text-center transition duration-300">
+            <div class="inline-block p-1 bg-indigo-100 rounded-full mb-6">
+              <img src="/public/images/gifs/reload.gif" alt="Technical implementation" class="rounded-full w-12 h-12" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Δυνατότητα Αλλαγής</h3>
+            <p class="text-gray-600">Αλλάξτε τον γιατρό σας έως μία ώρα πριν το ραντεβού σε περίπτωση απρόοπτου.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-purple-50 rounded-xl p-8 text-center transition duration-300">
+            <div class="inline-block p-1 bg-purple-100 rounded-full mb-6">
+              <img src="/public/images/gifs/appointment.gif" alt="Technical implementation" class="rounded-full w-12 h-12" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Επαναπρογραμματισμός</h3>
+            <p class="text-gray-600">Μεταφέρετε εύκολα το ραντεβού σας για άλλη ημέρα, όταν προκύπτει κάποιο πρόβλημα.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <img src="/public/images/giatroi-step3.png" alt="Technical implementation" class="rounded-xl shadow-lg" />
+          </div>
+          <div class="md:w-1/2 md:pl-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Τεχνολογική Υλοποίηση</h2>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">1</div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold text-lg text-gray-800">Δικτυακή Συνδεσιμότητα</h3>
+                  <p class="text-gray-600 mt-1">
+                    Ο αλγόριθμος συλλέγει δεδομένα για να αντιστοιχίσει αυτόματα τον χρήστη με τον καταλληλότερο γιατρό.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">2</div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold text-lg text-gray-800">Ενημέρωση σε Πραγματικό Χρόνο</h3>
+                  <p class="text-gray-600 mt-1">
+                    Με τη χρήση GPS και cloud τεχνολογιών, το σύστημα ενημερώνεται συνεχώς για διαδρομές και διαθεσιμότητες.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mt-1">
+                  <div class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">3</div>
+                </div>
+                <div class="ml-4">
+                  <h3 class="font-semibold text-lg text-gray-800">Δυνατότητα Διόρθωσης</h3>
+                  <p class="text-gray-600 mt-1">
+                    Η πλατφόρμα επιτρέπει στον χρήστη να αλλάξει ή να επαναπρογραμματίσει το ραντεβού του ώστε να
+                    εξυπηρετείται καλύτερα.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Οφέλη για Όλους</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Η πλατφόρμα μας προσφέρει πολλαπλά οφέλη τόσο στους χρήστες όσο και στους γιατρούς.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Benefits for Users -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-sm transition duration-300">
+            <div class="inline-block p-1 bg-blue-100 rounded-full mb-6">
+              <img src="/public/images/gifs/patient.gif" alt="Technical implementation" class="rounded-full w-12 h-12" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Οφέλη για τους Χρήστες</h3>
+
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2"><i class="fas fa-check-circle text-xl"></i></span>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Ταχύτερη Εξυπηρέτηση</h4>
+                  <p class="text-gray-600">Η άμεση αντιστοίχιση μειώνει τον χρόνο αναμονής.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2"><i class="fas fa-check-circle text-xl"></i></span>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Ευελιξία στη Διαχείριση</h4>
+                  <p class="text-gray-600">Πλήρης έλεγχος για αλλαγή ραντεβού ή γιατρού ανάλογα με τις ανάγκες.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2"><i class="fas fa-check-circle text-xl"></i></span>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Βελτίωση της Ποιότητας Φροντίδας</h4>
+                  <p class="text-gray-600">Συνδυασμός δεδομένων για παροχή βέλτιστης ιατρικής φροντίδας.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Benefits for Doctors -->
+          <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-sm transition duration-300">
+            <div class="inline-block p-1 bg-indigo-100 rounded-full mb-6">
+              <img
+                src="/public/images/gifs/health-monitoring.gif"
+                alt="Technical implementation"
+                class="rounded-full w-12 h-12"
+              />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Οφέλη για τους Γιατρούς</h3>
+
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2"><i class="fas fa-check-circle text-xl"></i></span>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Καλύτερη Διαχείριση Χρόνου</h4>
+                  <p class="text-gray-600">Αποδοτικότερη οργάνωση ραντεβού, μειώνοντας τα κενά μεταξύ επισκέψεων.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2"><i class="fas fa-check-circle text-xl"></i></span>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Ενίσχυση Συνεργασίας</h4>
+                  <p class="text-gray-600">Το δίκτυο προωθεί την ανταλλαγή πληροφοριών και την άμεση επικοινωνία.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2"><i class="fas fa-check-circle text-xl"></i></span>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Αποτελεσματικότητα Λειτουργίας</h4>
+                  <p class="text-gray-600">Ψηφιοποίηση διαχείρισης ραντεβού για καλύτερη καταγραφή δεδομένων.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
