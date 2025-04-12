@@ -39,11 +39,12 @@
         <img
           src="/images/logo.svg"
           alt="Γιατρός Κοντά σας Logo"
-          class="h-12 w-auto max-w-full object-contain"
+          class="h-12 w-auto max-w-full object-contain me-2"
           :class="{
             'brightness-[9] grayscale': !isScrolled && isHomePage,
           }"
         />
+        giatroskontasas.gr
       </NuxtLink>
       <div class="flex space-x-5 items-center">
         <NuxtLink

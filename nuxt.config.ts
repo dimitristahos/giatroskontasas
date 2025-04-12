@@ -1,6 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxt/ui", "@nuxtjs/turnstile", "@nuxt/icon", "@nuxt/eslint", "@nuxtjs/seo"],
+  app: {
+    head: {
+      script: [{ src: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js", defer: true }],
+      link: [
+        {
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css",
+        },
+      ],
+    },
+  },
   seo: {
     baseUrl: "https://giatroskontasas.gr",
     siteName: "Γιατρός Κοντά σας",

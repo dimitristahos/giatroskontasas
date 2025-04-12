@@ -15,10 +15,10 @@
         </div>
 
         <div class="w-full md:w-1/2 flex flex-wrap justify-between">
-          <div class="w-full md:w-1/6 mt-8 md:mt-0">
+          <div class="w-full md:w-1/4 mt-8 md:mt-0">
             <h3 class="font-medium text-lg mb-4">Σχετικά</h3>
             <ul class="space-y-2">
-              <li><NuxtLink to="/mission" class="hover:underline">Mission</NuxtLink></li>
+              <li><NuxtLink to="/network" class="hover:underline">Το Δίκτυο Γιατρών μας</NuxtLink></li>
               <li><NuxtLink to="/team" class="hover:underline">Team</NuxtLink></li>
               <li><NuxtLink to="/newsletter" class="hover:underline">Newsletter</NuxtLink></li>
             </ul>
