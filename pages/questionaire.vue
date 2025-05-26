@@ -3,12 +3,29 @@
   import rating from "@/components/questionaire/components/Rating.vue";
   import multipleChoice from "@/components/questionaire/components/MultipleChoice.vue";
   import slider from "@/components/questionaire/components/Slider.vue";
+  import axios from "axios";
+  import qs from "qs";
 
   definePageMeta({
     layout: "questionaire",
   });
 
   const $route = useRoute();
+  const runtimeConfig = useRuntimeConfig();
+
+  const env = runtimeConfig.public;
+
+  const { data } = await axios.post(
+    env.onlineFormUrl,
+    qs.stringify({
+      action: "questionaire_guid",
+      guid: $route.query.id,
+    })
+  );
+
+  if (data.success === false) {
+    await navigateTo("/");
+  }
 
   const currentSlide = ref<number>(0);
   const isSubmitted = ref(false);
